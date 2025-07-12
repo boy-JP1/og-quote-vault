@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://boy-jp1.github.io/og-quote-vault/sitemap.xml
