@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -113,3 +114,92 @@
     <script src="script.js"></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuoteVault – Daily Street-Smart Motivational Quotes by JP</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B0H920E2P9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B0H920E2P9');
+</script>
+<meta name="description" content="Get daily motivational quotes, street wisdom, and life lessons from JP John Prince. QuoteVault inspires with real words for real people.">
+<meta name="keywords" content="quotes, motivational quotes, quote vault, street quotes, inspiration, JP quotes">
+<meta name="author" content="JP John Prince">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="QuoteVault by JP – Daily Motivation" />
+<meta property="og:description" content="Street-smart quotes to power your day. Updated daily by JP." />
+<meta property="og:url" content="https://boy-jp1.github.io/og-quote-vault/" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="favicon[1].png">
+  </head>
+  <body>
+    <div class="container">
+      <h1>📜 QuoteVault</h1>
+      <p id="quote">Click the button to get inspired.</p>
+
+      <div class="buttons">
+        <button onclick="generateQuote()">🎲 New Quote</button>
+        <button onclick="copyQuote()">📋 Copy</button>
+        <button onclick="toggleMode()">🌓 Toggle Mode</button>
+      </div>
+
+      <label class="autorefresh">
+        <input
+          type="checkbox"
+          id="autoRefreshToggle"
+          onchange="toggleAutoRefresh()"
+        />
+        Auto-refresh every 10 sec
+      </label>
+    </div>
+
+    <!-- About the Creator -->
+    <section class="about">
+      <h2>About the Creator</h2>
+      <p>
+        Hi, I'm <strong>JP John Prince</strong> — a creative mind passionate
+        about tech, design, and building digital experiences that inspire
+        people. This is just one of many projects where I blend hustle, wisdom,
+        and style into the web.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <img
+        src="images/d773621473997f5feb7a8e85745255b8.jpg"
+        alt="Footer Image"
+        id="footerImage"
+      />
+      <p class="copyright">© 2025 JP John Prince. All rights reserved.</p>
+    </footer>
+
+    <!-- Rating Modal -->
+    <div id="ratingModal" class="modal">
+      <div class="modal-content">
+        <h3>⭐ Rate This Website</h3>
+        <div class="stars" id="starContainer">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <button onclick="sendRating()">Send</button>
+        <div id="thankYouMessage"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+>>>>>>> dea0600a478ea0df3db87b97a41629bec7fcf87c
