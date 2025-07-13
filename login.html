@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login – QuoteVault</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to QuoteVault</h1>
+      <p>Please enter your name to continue:</p>
+
+      <input type="text" id="username" placeholder="Your name..." />
+      <button onclick="saveUsername()">Login</button>
+    </div>
+
+    <script>
+      function saveUsername() {
+        const name = document.getElementById("username").value.trim();
+        if (name) {
+          localStorage.setItem("quotevault_user", name);
+          window.location.href = "index.html";
+        } else {
+          alert("Please enter your name.");
+        }
+      }
+
+      // If already logged in, skip to index
+      if (localStorage.getItem("quotevault_user")) {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

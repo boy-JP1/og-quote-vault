@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Favorites – QuoteVault</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">QuoteVault</div>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="favorites.html">⭐ Favorites</a></li>
+        <li><a href="login.html">🔐 Logout</a></li>
+      </ul>
+    </nav>
+    <h2>Welcome, <span id="fav-user-name"></span>👋🏽</h2>
+    <div class="container">
+      <h2>Your Favorite Quotes ❤</h2>
+      <ul id="favorite-list" class="favorites"></ul>
+      <button onclick="clearFavorites()">🗑 Clear All</button>
+    </div>
+
+    <script>
+      // Load favorites
+      const favList = document.getElementById("favorite-list");
+      const stored =
+        JSON.parse(localStorage.getItem("quotevault_favorites")) || [];
+
+      if (stored.length === 0) {
+        favList.innerHTML = "<p>No favorites yet. Go back and add some!</p>";
+      } else {
+        stored.forEach((quote, i) => {
+          const li = document.createElement("li");
+          li.textContent = quote;
+          favList.appendChild(li);
+        });
+      }
+
+      // Clear all favorites
+      function clearFavorites() {
+        if (confirm("Are you sure you want to clear all favorites?")) {
+          localStorage.removeItem("quotevault_favorites");
+          location.reload();
+        }
+      }
+
+      // Redirect if not logged in
+      const user = localStorage.getItem("quotevault_user");
+      if (!user) {
+        window.location.href = "login.html"; // Kick them back to login if not logged in
+      } else {
+        document.getElementById("fav-user-name").textContent = user;
+      }
+    </script>
+  </body>
+</html>

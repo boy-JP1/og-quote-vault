@@ -1,0 +1,169 @@
+/* ===== GENERAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.1);
+}
+
+nav .logo {
+  font-size: 1.5em;
+  color: gold;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: gold;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+}
+
+/* ===== MOOD POPUP ===== */
+#mood-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#mood-popup .popup-content {
+  background: #1f1f1f;
+  border: 2px solid gold;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  max-width: 300px;
+}
+
+#mood-popup .popup-content h2 {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+#mood-popup .popup-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#mood-popup .popup-content button:hover {
+  transform: scale(1.05);
+  background-color: gold;
+  color: #000;
+}
+
+#mood-popup .popup-content .exit {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #666;
+  margin-top: 20px;
+}
+
+/* ===== QUOTE BUTTONS ===== */
+button[onclick*="rizz"] {
+  background: #ff69b4;
+  color: #fff;
+}
+
+button[onclick*="hope"] {
+  background: #4db6ff;
+  color: #fff;
+}
+
+button[onclick*="calm"] {
+  background: #8dfcbb;
+  color: #000;
+}
+
+/* Other utility buttons */
+button[onclick*="generateQuote()"] {
+  background: #7e57c2;
+  color: #fff;
+}
+
+button[onclick*="copyQuote()"] {
+  background: #009688;
+  color: #fff;
+}
+
+button[onclick*="toggleMode()"] {
+  background: #ffa726;
+  color: #000;
+}
+
+/* Autorefresh toggle */
+.autorefresh {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #eee;
+}
+
+/* ===== AUDIO PLAYER HIDDEN ===== */
+#audio-container {
+  display: none;
+}
+
+/* Optional: Add soft animation to quote box */
+.quote-box {
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.08);
+}
